@@ -1,0 +1,113 @@
+body {
+    background: #222;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: #333;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 24px;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.relogio {
+    font-size: 3rem;
+    margin-bottom: 24px;
+    font-family: 'Roboto Mono', monospace;
+    background: #111;
+    padding: 16px 32px;
+    border-radius: 8px;
+    display: inline-block;
+    letter-spacing: 2px;
+}
+
+.relogio.pausado {
+    animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+button {
+    background: rgb(37, 83, 124);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    margin: 0 8px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #162e3fa2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.397);
+
+}
+
+button:active {
+    background: #035086;
+}
+
+button.ativo {
+    box-shadow: 0 0 8px rgb(0, 102, 190), 0 0 2px #fff;
+    outline: 2px solid rgb(35, 152, 255);
+}
+
+.footer {
+    margin-top: 35px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    text-align: center;
+    color: #aaa;
+    font-size: 0.8rem;
+    letter-spacing: 0.9px;
+}
+
+
+
+.pausado {
+    color: red;
+    font-weight: 800;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 8px;
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .relogio {
+        font-size: 1.2rem;
+        padding: 10px 8px;
+    }
+
+    button {
+        padding: 16px 8px;
+        font-size: 1.1rem;
+        margin: 0 4px;
+    }
+}
